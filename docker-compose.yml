@@ -1,0 +1,15 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: "1000:1000"  # Remplacez par votre UID:GID
+    environment:
+      - TZ=Pacific/Tahiti
+    volumes:
+      - /media/your_user/DOCKER-STORAGE/dock_serv_jellyfin/config:/config
+      - /media/your_user/DOCKER-STORAGE/dock_serv_jellyfin/cache:/cache
+      - /media/your_user/DOCKER-STORAGE/SHARE/ANIME:/media
+    devices:
+      - /dev/video19:/dev/video19   # optionel pour accéleration transcodage
+    network_mode: host # port 8096
+    restart: unless-stopped
