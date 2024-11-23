@@ -41,3 +41,6 @@ sudo nano /boot/firmware/config.txt
 add at the end of the file this line : gpu_mem=320
 
 save the file before exit and do a sudo reboot 
+
+and don't forget to choose material acceleration inside the jellyfish web ui.
+For raspberry pi, it could be either : VAAPI or V4L2
