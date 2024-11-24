@@ -35,7 +35,7 @@ Add additional devices as needed:
 devices:
   - /dev/videoX:/dev/videoX
 
-## Raspberry pi tricks (but don't do this for Raspberry pi 5 !)
+## Raspberry pi tricks (but don't do this for the Raspberry pi 5 !)
 sudo nano /boot/firmware/config.txt
 
 add at the end of the file this line : gpu_mem=320
