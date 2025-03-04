@@ -11,5 +11,6 @@ services:
       - /media/your_user/DOCKER-STORAGE/SHARE/ANIME:/media
     devices:
       - /dev/video19:/dev/video19   # optionel pour accéleration transcodage
+      # - /dev/dri:/dev/dri # can be useful for raspberry pi 5
     network_mode: host # port 8096
     restart: unless-stopped
